@@ -1,9 +1,8 @@
 //stf
- 
 import 'package:flutter/material.dart';
- 
+
 void main() => runApp(MyApp());
- 
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -17,23 +16,47 @@ class Contador extends StatefulWidget {
 }
 
 class _ContadorState extends State<Contador> {
-  int contador =0;
-
+  int contador = 0;
   @override
   Widget build(BuildContext context) {
-    print('build');
     return Scaffold(
-      appBar: AppBar(title: Text('Exemplo de Stateful Widget')),
-      body: Center(child: Text('Valor: $contador', style: TextStyle(fontSize: 30))),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState((){
-            contador++;
-          });
-        },
-        child: Icon(Icons.add),
+      appBar: AppBar(title: Text('Contador com Estado')),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text('Valor: $contador',
+              style: TextStyle(fontSize: 32, color: Colors.black)),
+          SizedBox(height: 30),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      contador++;
+                    });
+                  },
+                  child: Text('+')),
+              SizedBox(width: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      contador--;
+                    });
+                  },
+                  child: Text('-')),
+              SizedBox(width: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      contador = 0;
+                    });
+                  },
+                  child: Text('Resetar')),
+            ],
+          ),
+        ],
       ),
     );
   }
 }
- 
