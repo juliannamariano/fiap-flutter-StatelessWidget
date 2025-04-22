@@ -1,16 +1,25 @@
-# state
+# 📲 Aula Flutter: Stateful Widgets
 
-A new Flutter project.
+Exercício prático e conceitos da aula sobre **Stateful Widgets** com o professor **Diego Camilo**.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🎯 Objetivo
 
-A few resources to get you started if this is your first Flutter project:
+- Entender e aplicar Stateful Widgets no Flutter.
+- Usar `setState()` para atualizar a UI.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## ✅ Stateless vs Stateful
+
+**Stateless:** UI fixa, sem mudanças.  
+**Stateful:** UI dinâmica com estado interno.
+
+
+---
+
+## 🧩 Desafios
+
+**1. Contador com + / - / reset + cor do texto alterável**  
+**2. Simulador de votação: Gatos vs Cachorros com total e botão reset**
