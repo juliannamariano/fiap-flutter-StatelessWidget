@@ -25,7 +25,7 @@ class _ContadorState extends State<Contador> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text('Valor: $contador',
-              style: TextStyle(fontSize: 32, color: Colors.black)),
+              style: TextStyle(fontSize: 32, color: contador <0 ? Colors.red : Colors.black)),
           SizedBox(height: 30),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -39,12 +39,15 @@ class _ContadorState extends State<Contador> {
                   child: Text('+')),
               SizedBox(width: 10),
               ElevatedButton(
-                  onPressed: () {
-                    setState(() {
-                      contador--;
-                    });
-                  },
-                  child: Text('-')),
+                onPressed: () {
+                  setState(() {
+                    contador--;
+                  });
+                },
+                child: Text(
+                  '-',
+                ),
+              ),
               SizedBox(width: 10),
               ElevatedButton(
                   onPressed: () {
